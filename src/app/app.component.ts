@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Cliente } from './clientes/cliente.model';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  clientes = []
-  onClienteAdicionado (cliente){
+  clientes: Cliente[] = []
+  onClienteAdicionado (cliente: Cliente){
     this.clientes = [cliente, ...this.clientes]
   }
 }
