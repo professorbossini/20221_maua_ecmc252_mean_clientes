@@ -1,7 +1,8 @@
 import { Cliente } from "./cliente.model";
-
+import { Subject } from 'rxjs'
 export class ClienteService{
     private clientes: Cliente[] = []
+    private listaClientesAtualizada = new Subject<Cliente[]>();
 
     getClientes(): Cliente[]{
         return [...this.clientes]
@@ -12,5 +13,10 @@ export class ClienteService{
             nome, fone, email
         }
         this.clientes.push(cliente)
+        this.listaClientesAtualizada.next([...this.clientes])
+    }
+
+    getListaDeClientesAtualizada() {
+        return this.listaClientesAtualizada.asObservable()
     }
 }
