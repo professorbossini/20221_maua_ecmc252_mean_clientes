@@ -8,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class ClienteListaComponent implements OnInit {
 
   clientes = [
-    {
-      nome: 'José',
-      fone: '12345678',
-      email: 'jose@email.com'
-    },
-    {
-      nome: 'Maria',
-      fone: '98765432',
-      email: 'maria@email.com'
-    }
+    // {
+    //   nome: 'José',
+    //   fone: '12345678',
+    //   email: 'jose@email.com'
+    // },
+    // {
+    //   nome: 'Maria',
+    //   fone: '98765432',
+    //   email: 'maria@email.com'
+    // }
   ]
 
   constructor() { }

@@ -1,4 +1,4 @@
-<mat-accordion>
+<mat-accordion *ngIf="clientes.length > 0">
     
     <mat-expansion-panel *ngFor="let cliente of clientes">
         <mat-expansion-panel-header>{{cliente.nome}}</mat-expansion-panel-header>
@@ -7,3 +7,5 @@
     </mat-expansion-panel>
 
 </mat-accordion>
+
+<p *ngIf="clientes.length <= 0" class="mat-body-1" style="text-align: center">Nenhum cliente cadastrado</p>
